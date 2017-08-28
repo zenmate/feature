@@ -1,3 +1,5 @@
+require 'rubygems'
+
 Gem::Specification.new do |s|
   s.name = 'feature'
   s.version = '1.3.0'

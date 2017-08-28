@@ -10,6 +10,8 @@ Gem::Specification.new do |s|
   s.homepage = 'http://github.com/mgsnova/feature'
   s.require_paths = ['lib']
   s.summary = 'Feature Toggle library for ruby'
-  s.files = FileList['{lib,spec}/**/*'].exclude('rdoc').to_a + ['Rakefile', 'Gemfile', 'README.md', 'CHANGELOG.md']
+  spec.files = `git ls-files -z`.split("\x0").reject do |f|
+    f.match(%r{^(test|spec|features)/})
+  end
   s.license = 'MIT'
 end

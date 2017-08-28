@@ -1,5 +1,4 @@
 require 'rubygems'
-require 'rubygems/package'
 require 'rubygems/package_task'
 
 Gem::Specification.new do |s|

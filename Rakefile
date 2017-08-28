@@ -11,8 +11,8 @@ end
 
 task :mutant do
   require 'mutant'
-  result = Mutant::CLI.run(%w(--include lib --require feature --use rspec Feature*))
+  result = Mutant::CLI.run(%w[--include lib --require feature --use rspec Feature*])
   raise unless result == Mutant::CLI::EXIT_SUCCESS
 end
 
-task default: [:spec, :rubocop]
+task default: %i[spec rubocop]
